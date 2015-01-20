@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>AeroGear UnifiedPush Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="css/styles.css" rel="stylesheet" media="screen, print">
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+   
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+        
+    <script>
+      $(document).ready(function(){
+        $(".ups-create-app-btn").click(function(){
+          $(".ups-create-app").fadeToggle("fast");
+        });
+      });
+    </script>
+
+
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/brand.svg" alt="Aerogear" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown">
+              <span class="pficon pficon-info"></span>
+              Warnings: <strong>2</strong>
+            </a>
+            <div class="dropdown-menu infotip bottom-right">
+              <div class="arrow"></div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="i pficon pficon-info"></span>
+                  Added Datasources TestDS
+                </li>
+                <li class="list-group-item">
+                  <span class="i pficon pficon-info"></span>
+                  Modified Datasources ExampleDS
+                </li>
+              </ul>
+              <div class="footer"><a href="#">Clear Warnings</a></div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              Brian Johnson <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Accont management</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+<!--
+        <ul class="nav navbar-nav navbar-primary">
+          <li class="active">
+            <a href="#">Applications</a>
+          </li>
+          <li>
+            <a href="#">Send Push Notifications</a>
+          </li>
+          <li>
+        </ul>
+-->
+      </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+  </div>
+</nav>    
+    
+    
+    
+    
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 col-md-9">
+
+
+
+
+
+
+          <div class="well ups-blank-slate">
+            
+            <p><i class="fa fa-rocket fa-5x muted"></i></p>
+<!--
+              <h1>There are no applications installed yet.</h1>
+-->            
+            <h1>Create your first application</h1>
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="appname"></label>
+                <input type="text" class="form-control input-lg" id="appname" placeholder="Application name">
+              </div>
+            
+              <a href="wizard02.html"  class="btn btn-primary btn-lg">Create App</a>
+            </form>            
+            
+            <p>We will hold your hand and guide you all the way. Sit back and enjoy the ride.</p>
+            <p>If you want to read about the process, <a href="#">go to the documentation</a>.</p>
+            
+          </div><!--well-->
+
+
+
+        </div><!-- /col -->
+
+
+        <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
+
+          <div class="ups-blank-slate">
+            <p><i class="fa fa-bell-slash-o fa-4x muted"></i></p>
+            <p>Once you start set up your app, we'll show you statistics and notification history.</p>
+          </div>
+
+
+
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </body>
+</html>

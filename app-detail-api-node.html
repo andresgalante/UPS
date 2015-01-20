@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>AeroGear UnifiedPush Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="css/styles.css" rel="stylesheet" media="screen, print">
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+   
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".ups-all-variables input").click(function(){
+          $(".ups-more-variables").fadeToggle("fast");
+        });
+
+        $('.ups-send-btn').popover();
+      });
+      
+    </script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/brand.svg" alt="Aerogear" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown">
+              <span class="pficon pficon-info"></span>
+              Warnings: <strong>2</strong>
+            </a>
+            <div class="dropdown-menu infotip bottom-right">
+              <div class="arrow"></div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="i pficon pficon-info"></span>
+                  Added Datasources TestDS
+                </li>
+                <li class="list-group-item">
+                  <span class="i pficon pficon-info"></span>
+                  Modified Datasources ExampleDS
+                </li>
+              </ul>
+              <div class="footer"><a href="#">Clear Warnings</a></div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              Brian Johnson <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Accont management</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
+      </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+  </div>
+</nav>    
+    
+    
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 col-md-9">
+
+
+          <ol class="breadcrumb">
+            <li><a href="index.html">Applications</a></li>
+            <li><strong>Application One:</strong> Sender API</li>
+          </ol>                          
+
+
+          <div class="ups-app-header">
+            <div class="actions pull-right  ups-send-btn" tabindex="0" disabled="disabled" role="button"  data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Not yet..." data-content="To send test notifications go and set your first variable.">
+              <button class="btn btn-default" disabled="disabled"><i class="fa fa-paper-plane"></i> Send Notification to this app</button>
+            </div>
+             
+            <h1>Application One</h1>
+          </div><!-- app header -->
+          
+          <ul class="nav nav-tabs">
+            <li><a href="app-detail-variants.html">Variants</a></li>
+            <li class="active"><a href="#">Sender API</a></li>
+            <li><a href="app-detail-log.html">Activity log</a></li>
+          </ul>
+          
+          <ul class="nav nav-tabs nav-tabs-pf">
+            <li><a href="app-detail.html">Java Sender API</a></li>
+            <li class="active"><a href="#">Node.js Sender API</a></li>
+          </ul>
+          
+          
+            <h3>Set up Node.js UPS Sender API</h3>
+            <p>Instructions and links to node.js sender api docs. You can send notifications to your apps following this 2 stpes. First, on your backend, set up <a target="_blank" href="#">UnifiedPush Server</a>. Second, <a href="#">add a variant</a> and use the snippet on your mobile app to <a href="#">register you device</a>. You can add as many variants as needed. (TODO: improve this text and add links to docs)</p>
+          </section>
+
+            <p>Make your backend server send push notifications through this UnifiedPush Server using <a target="_blank" href="https://aerogear.org/docs/unifiedpush/GetStartedwithJavaSender/">Aerogears Java sender API</a>:</p>
+            <dl class="dl-horizontal">
+              <dt>Server URL</dt>
+              <dd>http://localhost:8080/ag-push/</dd>
+              <dt>Application ID</dt>
+              <dd>bff6aeb2-6b30-4967-bf0a-9a99d0873a63</dd>
+              <dt>Master Secret</dt>
+              <dd>be608987-a0db-458e-b5cd-62200ed006a8</dd>
+
+            </dl>
+
+
+<pre>
+JavaSender defaultJavaSender = new SenderClient.Builder("http://localhost:8080/ag-push/").build();
+UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
+        .pushApplicationId("bff6aeb2-6b30-4967-bf0a-9a99d0873a63")
+        .masterSecret("be608987-a0db-458e-b5cd-62200ed006a8")
+        .alert("Hello from Java Sender API!")
+        .build();
+defaultJavaSender.send(unifiedMessage, new MessageResponseCallback() {
+
+    @Override
+    public void onComplete(int statusCode) {
+        //do cool stuff
+    }
+
+    @Override
+    public void onError(Throwable throwable) {
+        //bring out the bad news
+    }
+});
+</pre>
+
+            <h3>Next step:</h3>
+            <p>This only appears if there are no devices installed on any variant. If you haven't done it yet, the first step to set up your mobile device is to click on Variants and <a href="#">add a variant</a>. Once you get the variant snippet go and <a target="_blank" href="#">register you device</a>.</p>
+            <p><a href="#" class="btn btn-primary"><span class="pficon pficon-add"></span> Add a Variant</a></p>
+
+
+
+
+        </div><!-- /col -->
+
+
+        <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
+
+          <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
+            <h2 class="h5">App Statistics</h2>
+          </div>
+          <ul class="list-unstyled ups-statistics">
+            <li><span>8</span>Variants</li>
+            <li><span>825</span>Delivered</li>
+            <li><span>52</span>Devices</li>
+          </ul>
+
+
+          <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
+            <h2 class="h5">App Notifications</h2>
+          </div>
+          <div class="list-group">
+            <a href="app-detail-log.html" class="list-group-item">
+              <h3 class="list-group-item-heading">Application name</h3>
+              <p class="list-group-item-text">29 Dec, 12:12:30, 2014</p>
+            </a>
+            <a href="app-detail-log.html" class="list-group-item">
+              <h3 class="list-group-item-heading">Application name</h3>
+              <p class="list-group-item-text">29 Dec, 12:12:30, 2014</p>
+            </a>
+            <a href="app-detail-log.html" class="list-group-item">
+              <h3 class="list-group-item-heading">Application name</h3>
+              <p class="list-group-item-text">29 Dec, 12:12:30, 2014</p>
+            </a>
+            <a href="app-detail-log.html" class="list-group-item">
+              <h3 class="list-group-item-heading">Application name</h3>
+              <p class="list-group-item-text">29 Dec, 12:12:30, 2014</p>
+            </a>
+
+          </div>
+          <p><a href="#"><span class="pficon pficon-history"></span> See all notifications</a></p>
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+  <head>
+    <title>AeroGear UnifiedPush Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="css/styles.css" rel="stylesheet" media="screen, print">
+<!--    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+   
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/brand.svg" alt="Aerogear" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-utility">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="pficon pficon-user"></span>
+              Brian Johnson <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Accont management</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+  </div>
+</nav>    
+    
+    
+    
+    
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 col-md-9">
+
+
+
+          <div class="page-header page-header-bleed-right">
+          <div class="actions pull-right">
+            <ul class="list-inline">
+              <li><a href="#"><span class="pficon pficon-edit"></span> Edit Name</a></li>
+            </ul>
+          </div>
+
+            <h1>Application Name</h1>
+          </div>
+
+
+  
+          <div class="well ups-blank-slate">
+            
+            <p><i class="fa fa-mobile fa-5x muted"></i></p>
+            <h1>There are no variants yet.</h1>
+            <p class="h3"><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><span class="pficon pficon-add"></span> Add a variant</button></p>
+                        
+            
+            <p>The first step to set up your mobile device is to add a variants. That will generate the code necessary to register UPS on your device.</p>
+            
+            <p>Learn more about variables <a href="#">on the documentation</a>.</p>
+          </div><!--well-->
+  
+
+
+
+
+          
+        </div><!-- /col -->
+
+
+        <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
+
+          <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
+            <h2 class="h5">Wizard steps</h2>
+          </div>
+          <ol class="list-unstyled ups-steps">
+            <li class="done"><strong><i class="fa fa-check"></i></strong> Create an Application</li>
+            <li class="active"><strong>2</strong> Add a variant</li>
+            <li><strong>3</strong> Mobile device: Set up variant</li>
+            <li><strong>4</strong> Backend: Set up sender API</li>
+          </ol>
+          <p><a href="app-detail-blank.html">Skip this, take to my app <i class="fa fa-angle-double-right"></i></a>
+
+
+
+
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+
+
+
+
+
+
+
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <span class="pficon pficon-close"></span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Add Variant</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="textInput-modal-markup">Name</label>
+            <div class="col-sm-9">
+              <input type="text" id="textInput-modal-markup" class="form-control" placeholder="eg. Demo"></div>
+          </div>
+
+<!--
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="textInput2-modal-markup">Description</label>
+            <div class="col-sm-9">
+              <input type="text" id="textInput2-modal-markup" class="form-control" placeholder="eg. The free demo app"></div>
+          </div>
+-->
+
+
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label" for="textInput2-modal-markup">Choose a platform</label>
+            <div class="col-sm-9">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <img src="http://placehold.it/40x40">
+                  <span>
+                    <strong>Android</strong><br>
+                    using Google Cloud Messaging
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label sr-only" for="textInput2-modal-markup">iOS</label>
+            <div class="col-sm-9">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <img src="http://placehold.it/40x40">
+                  <span>
+                    <strong>iOS</strong><br>
+                    using Apple Push Network 
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label sr-only" for="textInput2-modal-markup">Chrome</label>
+            <div class="col-sm-9">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <img src="http://placehold.it/40x40">
+                  <span>
+                    <strong>Chrome</strong><br>
+                    using Google Cloud Messaging for Chrome
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label sr-only" for="textInput2-modal-markup">Windows</label>
+            <div class="col-sm-9">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <img src="http://placehold.it/40x40">
+                  <span>
+                    <strong>Windows</strong><br>
+                    using Windows Network Services
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label sr-only" for="textInput2-modal-markup">SimplePush</label>
+            <div class="col-sm-9">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                  <img src="http://placehold.it/40x40">
+                  <span>
+                    <strong>SimplePush</strong><br>
+                    using the Mozilla WebAPI
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+         
+          
+
+
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <a href="wizard-alt-02.html" class="btn btn-primary">Create</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </body>
+</html>

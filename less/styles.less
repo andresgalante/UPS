@@ -1,0 +1,478 @@
+/*!
+ * Based on Bootstrap v3.3.1 
+ */
+
+// Core
+
+@import "../bower_components/patternfly/less/patternfly.less";
+
+@fa-font-path:      "../bower_components/patternfly/components/font-awesome/fonts/";
+@font-path:         "../bower_components/patternfly/dist/fonts";
+@icon-font-path:    "../bower_components/patternfly/components/bootstrap/fonts/";
+
+
+.muted{
+  color: @gray-light;
+  margin: 0;
+  h3 &{
+    font-weight: 400;
+    font-size: @font-size-base;
+  }
+}
+
+.success{
+  color: @brand-success!important
+}
+
+.warning{
+  color:@brand-warning!important
+}
+
+
+//navbar changes ==========================================================
+
+.navbar-header{
+  padding: 5px 0;
+  
+}
+
+.navbar-pf .navbar-utility  > li > a {
+padding: 12px 10px;}
+
+.navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon-user{
+  top: 12px;
+}
+
+//statistics ==========================================================
+.ups-statistics{
+  color: @gray-light;
+  .clearfix();
+  margin: 0;
+  
+  span{
+    display: block;
+    font-size: @font-size-h1;
+    line-height: normal;
+  }
+  
+  li{
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
+}
+
+.ups-sidebar-header{
+  margin-top: 30px;
+}
+
+//blank-slate ==========================================================
+
+.ups-blank-slate{
+margin: 20px 0;
+text-align: center;
+padding: 100px 160px;
+
+.sidebar-pf &{
+//  background: red;
+  padding: 20px;
+  color: @gray-light;
+}
+
+form{
+  margin: 20px 0;
+  input[type="text"]{width: 280px;}
+  }
+}
+
+//wizard ==========================================================
+
+
+.ups-wizard-actions{
+  margin: 0;
+ a{
+    margin-bottom: 40px;
+  }
+}
+//Steps ==========================================================
+
+
+.ups-steps{
+  li{
+    line-height: 30px;
+    margin-bottom: 5px;
+    strong{
+      background: @gray-lighter;
+//      background: @brand-primary;
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      border-radius: 15px;
+      color: @gray-light;
+      margin-right: 5px;
+    }
+    &.done{
+//      text-decoration: line-through;
+        color: @gray-light;
+      strong{
+        text-decoration: none;
+        background-color: @brand-success;
+        color: #fff;
+      }
+    }
+    &.active{
+      background: @gray-lighter;
+//     background: @gray-dark;
+//      color: #fff;
+      border-radius: 15px;
+      font-weight: bold;
+      strong{
+//        color: @gray-dark;
+//        color:@gray-lighter;
+//        background: @gray-dark;
+        }
+    }
+  }//li
+}//step
+
+
+h2 span{
+color: @brand-success;
+}
+
+
+
+// form
+
+.radio{
+  label{
+    input{
+      vertical-align: middle;
+      margin-top: 13px;
+    }
+    span{
+//      background: red;
+      display: inline-block;
+    }
+    strong{
+      line-height: normal;
+    }
+    img{
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+
+// ==========================================================
+// List of apps 
+// ==========================================================
+
+.ups-sub-header{
+  .clearfix();
+  margin-bottom: 20px;
+//  background: red;
+}
+
+
+// MEDIA Updates Bootstrap ======================================
+
+
+.media {
+  // Proper spacing between instances of .media
+  margin-top: 15px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.media-right,
+.media > .pull-right {
+  padding-left: 10px;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+}
+
+// Reset margins on headings for tighter default spacing
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+// Media list variation
+//
+// Undo default ul/ol styles
+.media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+// media custom =====================================================
+
+.ups-app-stream{
+  
+  .actions{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
+  }
+  
+  .media{
+    position: relative;
+    display: block;
+    border-bottom: 1px solid @gray-lighter;
+    padding: 10px 0;
+    margin: 0;
+    &:last-child{
+      border: none;
+      padding-bottom: 0;
+    }
+    &:first-child{
+      padding-top: 0;
+    }
+    &:hover{
+      .actions{display: block;}
+    }
+    a{
+      &:hover{
+        text-decoration: none;
+        .app-icon{
+          background-color: @link-hover-color; 
+          }
+        .media-heading{
+          text-decoration: underline;
+        }  
+      }
+    }
+  
+  }
+  
+  .media-body{
+    padding-top: 1px;
+    color: @gray;
+    li{
+      color: @gray-light;
+    }
+  }
+    
+
+.media-left,
+.media > .pull-left {
+  padding-right: 20px;
+}
+
+
+  
+  .app-icon{
+//    background-image: url(../img/grid.png);
+//    background-repeat:  no-repeat;
+//    background-position: center center;
+//    background-size: cover;
+//    background-color: @gray-light;
+    background-color: @brand-primary; 
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+//    border-radius: 15px;
+    color: rgba(255,255,255,.9);
+  //  text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+    font-size: @font-size-base * 2.5;
+    font-weight: lighter;
+  }
+  
+  
+  
+}// ups media stream
+
+
+
+//app options ============================================================
+
+.actions{
+  position: relative;
+}
+
+.ups-create-app {
+  top: 30px;
+  left: -55px;
+  max-width:  none;
+  width: 250px;
+}
+
+.actions{
+  li{
+    &.danger a{
+      color: @brand-danger;
+    }
+    a{
+      text-decoration: none;
+      &:hover{
+        color: @link-hover-color;
+      }
+    }
+  }
+}
+
+// Variants ===============================================
+.ups-variant{
+    border-bottom: 1px solid @gray-lighter;
+  &:last-child{border: none;}  
+  &:hover{
+    .actions{
+      display: block; 
+    }
+  }
+}
+.ups-variant-header{
+  padding: 10px 0;
+  cursor:pointer;
+  .actions{
+   display: none;
+  }
+  
+  h3, h4{
+    margin: 0;
+    color: @brand-primary;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  ul{
+    color: @gray-light;
+    display: inline-block;
+    margin: 0;
+    }
+}
+
+.ups-is-disabled{
+  .ups-variant-header h4{
+    color: @gray-light;
+//    text-decoration: line-through;
+  }
+  
+  .ups-variant-body{
+    &:before{
+      content: ".";
+      position: absolute;
+      top:0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 99999;
+      background: rgba(255,255,255,.6);
+      text-indent: -99999px;
+    }
+  }
+}
+
+.ups-variant-body{
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  display: none;
+//  border-bottom: 1px solid @gray-lighter;
+//background: orange;
+}
+
+.ups-panel{
+  clear: both;
+  margin: 10px 0;
+  ul{
+    
+  }
+
+  .panel-heading{
+    .clearfix();
+    img{
+      float: left;
+      margin-right: 10px;
+    }
+    ul{
+      display: inline-block;
+      line-height: 40px;
+      margin: 0;
+      color: @gray-light;
+    }
+  }
+  
+  .panel-title{
+    line-height: 40px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+}
+
+.ups-main-action{
+  margin: 10px 0;
+}
+
+// Snippet Nav Tabs =====================================================
+
+  .ups-snippet-nav.nav-justified > li > a{
+    border-bottom: none;
+  }
+
+// app-header =====================================================
+// .ups-app-header{
+//   h1{
+//     font-weight: bold;
+//   }
+// }
+
+
+// Form send notification ===========================================
+
+.ups-more-variables{
+  display: none;
+}
+
+
+
+// Login ===========================================
+
+.login-pf {
+  body{
+    color: @gray;
+  }
+  .container{
+    color: #fff;
+  }
+}
+
+ @login-bg-color: #080808;
+ @img-path:      "/img";
+ @img-bg-login:  "bg-login.png";
+
+
+
+
+
+
+
+
+
+
+
+

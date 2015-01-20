@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 login-pf"><![endif]-->
+<!--[if IE 9]><html class="ie9 login-pf"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="login-pf">
+<!--<![endif]-->
+  <head>
+    <title>Login - PatternFly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../dist/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../dist/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../dist/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../dist/img/apple-touch-icon-57-precomposed.png">
+    <link href="css/styles.css" rel="stylesheet" media="screen, print">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="../components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
+    <!-- IE8 requires jQuery v1.x -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+          $('#myModal').modal('show');
+        });
+
+    </script>  
+      
+  </head>
+  <body>
+    <span id="badge">
+      <img src="img/aerogear-logo.svg" alt="Aerogear logo" />
+    </span>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="brand">
+            <img src="img/brand.svg" alt="Aerogear Unified Push Server">
+          </div><!--/#brand-->
+        </div><!--/.col-*-->
+        <div class="col-sm-7 col-md-6 col-lg-5 login">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputUsername" class="col-sm-2 col-md-2 control-label">Username</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-sm-2 col-md-2 control-label">Password</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" tabindex="3"> Remember Username
+                  </label>
+                </div>
+                <span class="help-block"> Forgot <a href="#" tabindex="5">Username</a> or <a href="#" tabindex="6">Password</a>?</span>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 submit">
+                <a href="wizard01.html"  class="btn btn-primary btn-lg" tabindex="4">Log In</a>
+              </div>
+            </div>
+          </form>
+        </div><!--/.col-*-->
+        <div class="col-sm-5 col-md-6 col-lg-7 details">
+          <p><strong>Welcome to Aerogear Unified Push Server!</strong>
+        
+          The AeroGear UnifiedPush Server is a server that allows sending native push messages to different mobile operating systems. Currently the server supports Apple’s APNs, Google Cloud Messaging and Mozilla’s Simple Push. Version is xxx.</p>
+        
+        </div><!--/.col-*-->
+      </div><!--/.row-->
+    </div><!--/.container-->
+
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+<!--
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+
+          <span class="pficon pficon-close"></span>
+        </button>
+-->
+        <h4 class="modal-title" id="myModalLabel">First step: Keycloack configurations</h4>
+      </div>
+      <div class="modal-body">
+        <p>UnifiedPush Server uses Keycloak as an authentication and user management endpoint. You can either use a default instance that comes with UnifiedPush Server installation or you choose to select an existing or a standalone Keycloak installation (so you can use it as an authentication backend for more applications).</p>
+ 
+
+          <form role="form">
+          
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="optionsRadios" id="Default" value="option1" checked="">
+                <strong>Default</strong>  A bundled Keycloak instance will be used as an authentication backend
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="optionsRadios" id="Custom" value="option2">
+                <strong>Custom</strong> Use an existing or a standalone Keycloak instance (by providing its URL)
+              </label>
+            </div>
+          
+          
+            <div class="form-group">
+              <label for="keycloackUrl">Keycloack URL</label>
+              <input type="text" class="form-control" id="keycloackUrl" placeholder="Enter your keycloack URL">
+            </div>
+          </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Continue to Unified Push Server</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  </body>
+</html>
