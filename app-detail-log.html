@@ -19,39 +19,18 @@
    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
-    <script src="../components/respond/dest/respond.min.js"></script>
+    <script src="bower_components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/patternfly/components/respond/dest/respond.min.js"></script>
     <![endif]-->
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
     
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
-    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
-    
-    <script>
-      $(document).ready(function(){
-        $(".ups-all-variables input").click(function(){
-          $(".ups-more-variables").fadeToggle("fast");
-        });
-        
-        $('.datatable').dataTable({
-          "fnDrawCallback": function( oSettings ) {
-            // if .sidebar-pf exists, call sidebar() after the data table is drawn
-            if ($('.sidebar-pf').length > 0) {
-              sidebar();
-            }
-          }
-        });
-
-      });
-
-
-
-
-
-    </script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     
 
   </head>
@@ -164,28 +143,40 @@
       <td>{"ipAddress":"127.0.0.1","clientIdentifier":"AeroG...</td>
       <td>Notification...</td>
       <td>0 installations</td>
-      <td>Succeeded</td>
+      <td class="success"><i class="fa fa-check"></i> Succeeded</td>
       <td>29 Dec, 12:12:30, 2014</td>
     </tr>
     <tr>
       <td>{"ipAddress":"127.0.0.1","clientIdentifier":"AeroG...</td>
       <td>Notification...</td>
       <td>0 installations</td>
-      <td>Succeeded</td>
+      <td class="warning">
+              <span class="pficon-layered">
+                <span class="pficon pficon-warning-triangle"></span>
+                <span class="pficon pficon-warning-exclamation"></span>
+              </span>
+              Warning
+      </td>
       <td>29 Dec, 12:12:30, 2014</td>
     </tr>
     <tr>
       <td>{"ipAddress":"127.0.0.1","clientIdentifier":"AeroG...</td>
       <td>Notification...</td>
       <td>0 installations</td>
-      <td>Succeeded</td>
+      <td class="danger">
+        <span class="pficon-layered">
+          <span class="pficon pficon-error-octagon"></span>
+          <span class="pficon pficon-error-exclamation"></span>
+        </span>
+        Fail
+      </td>
       <td>29 Dec, 12:12:30, 2014</td>
     </tr>
     <tr>
       <td>{"ipAddress":"127.0.0.1","clientIdentifier":"AeroG...</td>
       <td>Notification...</td>
       <td>0 installations</td>
-      <td>Succeeded</td>
+      <td class="success"><i class="fa fa-check"></i> Succeeded</td>
       <td>29 Dec, 12:12:30, 2014</td>
     </tr>
   </tbody>
@@ -263,52 +254,14 @@
           <div class="form-group">
             <label class="col-sm-3 control-label" for="textInput-modal-markup">Variants</label>
             <div class="col-sm-9">
-              <div class="checkbox">
-                <label class="ups-all-variables">
-                  <input type="checkbox" value="" checked="checked">
-                  All
-                </label>
-              </div>
-            
-              <div class="ups-more-variables">
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              <div class="checkbox disabled">
-                <label>
-                  <input type="checkbox" value="">
-                  Variable name
-                </label>
-              </div>
-              </div><!-- more variables -->
-            
+
+              <select class="selectpicker" multiple="multiple">
+                <option>Variant One</option>
+                <option>Variant Two</option>
+                <option>Variant Three</option>
+                <option>Variant Four</option>
+              </select>
+
             </div>
           </div>
 

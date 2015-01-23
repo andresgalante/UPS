@@ -11,29 +11,26 @@
 @icon-font-path:    "../bower_components/patternfly/components/bootstrap/fonts/";
 
 
-.muted{
-  color: @gray-light;
-  margin: 0;
-  h3 &{
-    font-weight: 400;
-    font-size: @font-size-base;
-  }
-}
+ .muted{
+   color: @gray-light;
+   margin: 0;
+   h3 &{
+//     font-weight: 400;
+     font-size: @font-size-base;
+   }
+ }
 
-.success{
-  color: @brand-success!important
-}
+.success{     color: @brand-success!important}
 
-.warning{
-  color:@brand-warning!important
-}
+.warning{     color:@brand-warning!important}
+
+.danger{       color:@brand-danger!important}
 
 
-//navbar changes ==========================================================
+//navbar changes to make it heigher ==========================================================
 
 .navbar-header{
   padding: 5px 0;
-  
 }
 
 .navbar-pf .navbar-utility  > li > a {
@@ -43,11 +40,50 @@ padding: 12px 10px;}
   top: 12px;
 }
 
+//main warning ==========================================================
+
+.ups-main-warning{
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+//  background: red;
+  z-index: 9999;
+  .alert{
+    margin: 0 20%;
+    text-align: left;
+  }
+}
+
+
+//snippet ==========================================================
+
+.ups-snippet{
+  position: relative;
+  a{
+    background: #fff;
+    border-bottom: 1px solid @pre-border-color;
+    border-left: 1px solid @pre-border-color;
+    border-radius: 0 0 0 @border-radius-base;
+    color: @gray-light;
+    position: absolute;
+    padding: 4px 8px;
+    right: 1px;
+    top: 1px;
+    &:hover{
+      background: @brand-primary;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
 //statistics ==========================================================
 .ups-statistics{
   color: @gray-light;
-  .clearfix();
   margin: 0;
+  .clearfix();
   
   span{
     display: block;
@@ -57,31 +93,32 @@ padding: 12px 10px;}
   
   li{
     float: left;
-    width: 33%;
     margin: 0;
+    width: 33%;
   }
 }
 
-.ups-sidebar-header{
-  margin-top: 30px;
+
+//master secret ==========================================================
+
+.dl-horizontal{
 }
 
 //blank-slate ==========================================================
 
 .ups-blank-slate{
-margin: 20px 0;
-text-align: center;
-padding: 100px 160px;
-
-.sidebar-pf &{
-//  background: red;
-  padding: 20px;
-  color: @gray-light;
-}
-
-form{
   margin: 20px 0;
-  input[type="text"]{width: 280px;}
+  padding: 100px 160px;
+  text-align: center;
+  
+  .sidebar-pf &{
+    color: @gray-light;
+    padding: 20px;
+  }
+
+  form{
+    margin: 20px 0;
+    input[type="text"]{width: 280px;}
   }
 }
 
@@ -94,43 +131,77 @@ form{
     margin-bottom: 40px;
   }
 }
+
+.ups-wizard{
+  text-align: center;
+  .btn{
+    width: 30%;
+  }
+  
+
+  .well{
+    margin-top: 20px;
+    position: relative;
+    padding-top: 34px;
+    &:before{
+      content: @fa-var-angle-right;
+      font-family: @icon-font-name-fa;
+      position: absolute;
+      font-size: @font-size-base * 2;
+      left: -25px;
+      color: @gray-light;
+    }
+    &#box1:before{
+      display: none;
+    }
+    .ups-number{
+      position: absolute;
+      top: -17px;
+      left: 0px;
+      display: block;
+      width: 100%;
+      span{
+        background: @gray-dark;
+        color: @gray-lighter;
+        line-height: 34px;
+        width: 34px;
+        border-radius: 17px;
+        display: inline-block;
+        font-weight: bold;
+        box-shadow: 0 2px 3px rgba(0,0,0,.2);
+      }
+    }
+  }
+}
+
 //Steps ==========================================================
 
 
 .ups-steps{
   li{
-    line-height: 30px;
     margin-bottom: 5px;
+    line-height: 30px;
     strong{
       background: @gray-lighter;
-//      background: @brand-primary;
-      display: inline-block;
-      width: 30px;
-      text-align: center;
       border-radius: 15px;
       color: @gray-light;
+      display: inline-block;
       margin-right: 5px;
+      text-align: center;
+      width: 30px;
     }
     &.done{
-//      text-decoration: line-through;
-        color: @gray-light;
+      color: @gray-light;
       strong{
-        text-decoration: none;
         background-color: @brand-success;
         color: #fff;
+        text-decoration: none;
       }
     }
     &.active{
       background: @gray-lighter;
-//     background: @gray-dark;
-//      color: #fff;
       border-radius: 15px;
       font-weight: bold;
-      strong{
-//        color: @gray-dark;
-//        color:@gray-lighter;
-//        background: @gray-dark;
-        }
     }
   }//li
 }//step
@@ -142,28 +213,28 @@ color: @brand-success;
 
 
 
-// form
+// ups-add-variable
 
-.radio{
-  label{
-    input{
-      vertical-align: middle;
-      margin-top: 13px;
-    }
-    span{
-//      background: red;
-      display: inline-block;
-    }
-    strong{
-      line-height: normal;
-    }
-    img{
-      display: inline-block;
-      vertical-align: top;
+.ups-add-variable{
+
+  .radio{
+    label{
+      input{
+        margin-top: 13px;
+        vertical-align: middle;
+      }
+      
+      span{
+        display: inline-block;
+        width: 100%;
+      }
+
+      strong{
+        line-height: normal;
+      }
     }
   }
 }
-
 
 // ==========================================================
 // List of apps 
@@ -172,7 +243,6 @@ color: @brand-success;
 .ups-sub-header{
   .clearfix();
   margin-bottom: 20px;
-//  background: red;
 }
 
 
@@ -195,7 +265,7 @@ color: @brand-success;
 
 .media-left,
 .media > .pull-left {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .media-left,
@@ -233,18 +303,18 @@ color: @brand-success;
 .ups-app-stream{
   
   .actions{
-    position: absolute;
-    top: 10px;
-    right: 0;
     display: none;
+    position: absolute;
+    right: 0;
+    top: 10px;
   }
   
   .media{
-    position: relative;
-    display: block;
     border-bottom: 1px solid @gray-lighter;
-    padding: 10px 0;
+    display: block;
     margin: 0;
+    padding: 10px 0;
+    position: relative;
     &:last-child{
       border: none;
       padding-bottom: 0;
@@ -265,47 +335,28 @@ color: @brand-success;
           text-decoration: underline;
         }  
       }
-    }
-  
+    }  
   }
   
   .media-body{
-    padding-top: 1px;
     color: @gray;
+    padding-top: 1px;
     li{
       color: @gray-light;
     }
   }
-    
-
-.media-left,
-.media > .pull-left {
-  padding-right: 20px;
-}
-
-
   
   .app-icon{
-//    background-image: url(../img/grid.png);
-//    background-repeat:  no-repeat;
-//    background-position: center center;
-//    background-size: cover;
-//    background-color: @gray-light;
     background-color: @brand-primary; 
     width: 50px;
     line-height: 50px;
     text-align: center;
-//    border-radius: 15px;
     color: rgba(255,255,255,.9);
-  //  text-shadow: 0 -1px 0 rgba(0,0,0,.8);
     font-size: @font-size-base * 2.5;
     font-weight: lighter;
-  }
-  
-  
+  }  
   
 }// ups media stream
-
 
 
 //app options ============================================================
@@ -315,9 +366,9 @@ color: @brand-success;
 }
 
 .ups-create-app {
-  top: 30px;
   left: -55px;
   max-width:  none;
+  top: 30px;
   width: 250px;
 }
 
@@ -346,16 +397,16 @@ color: @brand-success;
   }
 }
 .ups-variant-header{
-  padding: 10px 0;
   cursor:pointer;
+  padding: 10px 0;
   .actions{
    display: none;
   }
   
   h3, h4{
-    margin: 0;
     color: @brand-primary;
     display: inline-block;
+    margin: 0;
     margin-right: 10px;
   }
   ul{
@@ -368,57 +419,47 @@ color: @brand-success;
 .ups-is-disabled{
   .ups-variant-header h4{
     color: @gray-light;
-//    text-decoration: line-through;
   }
-  
-  .ups-variant-body{
-    &:before{
-      content: ".";
-      position: absolute;
-      top:0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 99999;
-      background: rgba(255,255,255,.6);
-      text-indent: -99999px;
-    }
-  }
+//  .ups-variant-body{
+//    &:before{
+//      background: rgba(255,255,255,.6);
+//      bottom: 0;
+//      content: ".";
+//      left: 0;
+//      position: absolute;
+//      right: 0;
+//      text-indent: -99999px;
+//      top:0;
+//      z-index: 99999;
+//    }
+//  }
 }
 
 .ups-variant-body{
-  width: 100%;
-  position: relative;
-  padding: 10px 0;
   display: none;
-//  border-bottom: 1px solid @gray-lighter;
-//background: orange;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
 }
 
 .ups-panel{
-  clear: both;
   margin: 10px 0;
-  ul{
-    
-  }
+  clear: both;
 
   .panel-heading{
     .clearfix();
-    img{
-      float: left;
-      margin-right: 10px;
-    }
+        
     ul{
+      color: @gray-light;
       display: inline-block;
       line-height: 40px;
       margin: 0;
-      color: @gray-light;
     }
   }
   
   .panel-title{
-    line-height: 40px;
     display: inline-block;
+    line-height: 40px;
     margin-right: 10px;
   }
 
@@ -430,49 +471,50 @@ color: @brand-success;
 
 // Snippet Nav Tabs =====================================================
 
-  .ups-snippet-nav.nav-justified > li > a{
-    border-bottom: none;
-  }
-
-// app-header =====================================================
-// .ups-app-header{
-//   h1{
-//     font-weight: bold;
-//   }
-// }
+.ups-snippet-nav.nav-justified > li > a{
+  border-bottom: none;
+}
 
 
 // Form send notification ===========================================
 
 .ups-more-variables{
+  background-size: cover;
   display: none;
 }
+
+.ups-variant-name-header{
+  .clearfix();
+  line-height: 40px;
+}
+
+.ups-has-icon{
+    &:before{
+    background-image:  url(../img/variants-logo-sprite.png);
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    content: "icon";
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    width: 40px;
+    float: left;
+    text-indent: -999999px;
+    margin-right: 10px;
+  }  
+}
+
+.ups-variant-android:before{background-position:                                             center 0 }
+.ups-variant-ios:before, .ups-variant-ios span:before{background-position:                   center -40px}
+.ups-variant-chrome:before, .ups-variant-chrome span:before{background-position:             center -80px}
+.ups-variant-windows:before, .ups-variant-windows span:before{background-position:           center -120px}
+.ups-variant-mozila:before, .ups-variant-mozila span:before{background-position:             center -160px}
 
 
 
 // Login ===========================================
 
-.login-pf {
-  body{
-    color: @gray;
-  }
-  .container{
-    color: #fff;
-  }
-}
-
  @login-bg-color: #080808;
- @img-path:      "/img";
- @img-bg-login:  "bg-login.png";
-
-
-
-
-
-
-
-
-
-
-
+ @img-path:      "../img";
+ @img-bg-login:  "bg-login.jpg";
 

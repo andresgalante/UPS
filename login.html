@@ -17,21 +17,18 @@
     <link href="css/styles.css" rel="stylesheet" media="screen, print">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
-    <script src="../components/respond/dest/respond.min.js"></script>
+    <script src="bower_components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/patternfly/components/respond/dest/respond.min.js"></script>
     <![endif]-->
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     
-    <script>
-        $(document).ready(function(){
-          $('#myModal').modal('show');
-        });
-
-    </script>  
       
   </head>
   <body>
@@ -59,20 +56,25 @@
                 <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2">
               </div>
             </div>
+
             <div class="form-group">
               <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
-                <div class="checkbox">
+<!--
+                  <div class="checkbox">
                   <label>
                     <input type="checkbox" tabindex="3"> Remember Username
                   </label>
                 </div>
                 <span class="help-block"> Forgot <a href="#" tabindex="5">Username</a> or <a href="#" tabindex="6">Password</a>?</span>
+  -->
               </div>
               <div class="col-xs-4 col-sm-4 col-md-4 submit">
-                <a href="wizard01.html"  class="btn btn-primary btn-lg" tabindex="4">Log In</a>
+                <a href="wizard01-welcome.html"  class="btn btn-primary btn-lg" tabindex="4">Log In</a>
               </div>
             </div>
+
           </form>
+
         </div><!--/.col-*-->
         <div class="col-sm-5 col-md-6 col-lg-7 details">
           <p><strong>Welcome to Aerogear Unified Push Server!</strong>
@@ -84,7 +86,7 @@
     </div><!--/.container-->
 
 
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal" id="keycloackConfigModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -102,19 +104,18 @@
 
           <form role="form">
           
-            <div class="checkbox">
+            <div class="radio">
               <label>
-                <input type="checkbox" name="optionsRadios" id="Default" value="option1" checked="">
+                <input type="radio" name="optionsRadios" id="Default" value="option1" checked="">
                 <strong>Default</strong>  A bundled Keycloak instance will be used as an authentication backend
               </label>
             </div>
-            <div class="checkbox">
+            <div class="radio">
               <label>
-                <input type="checkbox" name="optionsRadios" id="Custom" value="option2">
+                <input type="radio" name="optionsRadios" id="Custom" value="option2">
                 <strong>Custom</strong> Use an existing or a standalone Keycloak instance (by providing its URL)
               </label>
             </div>
-          
           
             <div class="form-group">
               <label for="keycloackUrl">Keycloack URL</label>

@@ -18,30 +18,36 @@
    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
-    <script src="../components/respond/dest/respond.min.js"></script>
+    <script src="bower_components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/patternfly/components/respond/dest/respond.min.js"></script>
     <![endif]-->
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
     
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
-    <script src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
-
-        
-    <script>
-      $(document).ready(function(){
-        $(".ups-create-app-btn").click(function(){
-          $(".ups-create-app").fadeToggle("fast");
-        });
-        $('.selectpicker').selectpicker();
-      });
-    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 
   </head>
   <body>
+
+        <div class="ups-main-warning">
+          <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+              <span class="pficon pficon-close"></span>
+            </button>
+            <span class="pficon-layered">
+              <span class="pficon pficon-warning-triangle"></span>
+              <span class="pficon pficon-warning-exclamation"></span>
+            </span>
+            <strong>Main console alerts goes here!</strong> We are not really sure, but <a href="#" class="alert-link">it might be bad</a>.
+          </div>
+        </div><!-- ups main warning-->
+
 
 
     <nav class="navbar navbar-default navbar-pf" role="navigation">
@@ -105,93 +111,35 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-8 col-md-9">
-
+        
 
           <div class="page-header page-header-bleed-right">
             <div class="actions pull-right">
-              <a href="#" class="btn btn-primary ups-create-app-btn"><span class="pficon pficon-add"></span> Create Application</a>
-              
-              <div class="popover bottom ups-create-app">
-                <div class="arrow"></div>
-
-                <div class="popover-content">
-
-<form class="form-inline">
-  <div class="form-group">
-    <label class="sr-only" for="app">Name of the app</label>
-    <input type="text" class="form-control" id="app" placeholder="Name of the app">
-  </div>
-  <a href="wizard-alt-01.html" class="btn btn-primary">Create!</a>
-</form>
-
-                </div>
-              </div>
-              
-              
+              <a href="wizard01-welcome.html" class="btn btn-primary ups-create-app-btn"><span class="pficon pficon-add"></span> Create Application</a>
             </div>
             <h1>Applications</h1>
           </div>
 
 
-<div class="ups-sub-header">
-
-<!--
-  <p class="pull-right">
-    <select class="selectpicker">
-    <option>Order by owner</option>
-    <option>Order by variant</option>
-    <option>Order by app name</option>
-    <option>Order by newer</option>
-    <option>Order by older</option>
-  </select>
-    Search
-  </p>
-  
-  <p>You are looking at 1 to 20 of 57 Applications</p>
-
--->
-
-<form role="form" class="search-pf has-button">
-  <div class="form-group has-clear">
-    <div class="search-pf-input-group">
-      <label for="search1" class="sr-only">Search</label>
-      <input id="search1" type="search" class="form-control" placeholder="Search">
-      <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
-    </div>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
-  </div>
-</form>
-<script>
-  (function($) {
-    $(document).ready(function() {
-      // Hide the clear button if the search input is empty
-      $(".search-pf .has-clear .clear").each(function() {
-        if (!$(this).prev('.form-control').val()) {
-          $(this).hide();
-        }
-      });
-      // Show the clear button upon entering text in the search input
-      $(".search-pf .has-clear .form-control").keyup(function () {
-        var t = $(this);
-        t.next('button').toggle(Boolean(t.val()));
-      });
-      // Upon clicking the clear button, empty the entered text and hide the clear button
-      $(".search-pf .has-clear .clear").click(function () {
-        $(this).prev('.form-control').val('').focus();
-        $(this).hide();
-      });
-    });
-  })(jQuery);
-</script>
-
-
-
-
-</div><!-- subheader -->
-
-
+          <div class="ups-sub-header">
+          
+          <form role="form" class="search-pf has-button">
+            <div class="form-group has-clear">
+              <div class="search-pf-input-group">
+                <label for="search1" class="sr-only">Search</label>
+                <input id="search1" type="search" class="form-control" placeholder="Search">
+                <button type="button" class="clear" aria-hidden="true"><span class="pficon pficon-close"></span></button>
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+            </div>
+          </form>
+          
+          
+          
+          
+          </div><!-- subheader -->
 
 
         <ul class="media-list ups-app-stream">
@@ -199,8 +147,7 @@
           <li class="media">
             <div class="actions">
               <ul class="list-inline">                
-                <li><a href="#"><i class="fa fa-rocket"></i> Launch</a></li>
-                <li><a href="#"><span class="pficon pficon-edit"></span> Edit</a></li>
+                <li><a href="#"><span class="pficon pficon-edit"></span> Change name</a></li>
                 <li class="danger"><a href="#"><span class="pficon pficon-delete"></span> Delete</a></li>
               </ul>
             </div>
@@ -231,8 +178,7 @@
           <li class="media">
           <div class="actions pull-right">
             <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-rocket"></i> Launch</a></li>
-                <li><a href="#"><span class="pficon pficon-edit"></span> Edit</a></li>
+                <li><a href="#"><span class="pficon pficon-edit"></span> Change name</a></li>
               <li class="danger"><a href="#"><span class="pficon pficon-delete"></span> Delete</a></li>
             </ul>
           </div>
@@ -259,8 +205,7 @@
           
           <div class="actions pull-right">
             <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-rocket"></i> Launch</a></li>
-                <li><a href="#"><span class="pficon pficon-edit"></span> Edit</a></li>
+                <li><a href="#"><span class="pficon pficon-edit"></span> Change name</a></li>
               <li class="danger"><a href="#"><span class="pficon pficon-delete"></span> Delete</a></li>
             </ul>
           </div>
@@ -287,8 +232,7 @@
           
           <div class="actions pull-right">
             <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-rocket"></i> Launch</a></li>
-                <li><a href="#"><span class="pficon pficon-edit"></span> Edit</a></li>
+                <li><a href="#"><span class="pficon pficon-edit"></span> Change name</a></li>
               <li class="danger"><a href="#"><span class="pficon pficon-delete"></span> Delete</a></li>
             </ul>
           </div>
@@ -315,8 +259,7 @@
           <li class="media">
           <div class="actions">
             <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-rocket"></i> Launch</a></li>
-                <li><a href="#"><span class="pficon pficon-edit"></span> Edit</a></li>
+                <li><a href="#"><span class="pficon pficon-edit"></span> Change name</a></li>
               <li class="danger"><a href="#"><span class="pficon pficon-delete"></span> Delete</a></li>
             </ul>
           </div>
@@ -389,7 +332,7 @@
 
 
 
-          <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right ups-sidebar-header">
+          <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
             <h2 class="h5">Latest Notifications</h2>
           </div>
           <div class="list-group">
@@ -411,7 +354,7 @@
             </a>
 
           </div>
-          <p><a href="#"><span class="pficon pficon-history"></span> See all notifications</a></p>
+<!--           <p><a href="#"><span class="pficon pficon-history"></span> See all notifications</a></p> -->
         </div><!-- /col -->
       </div><!-- /row -->
     </div><!-- /container -->

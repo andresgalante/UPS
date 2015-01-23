@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".ups-all-variables input").click(function(){$(".ups-more-variables").fadeToggle("fast")}),$(".ups-send-btn").popover()});

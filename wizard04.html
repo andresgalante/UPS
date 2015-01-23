@@ -18,15 +18,18 @@
    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="../components/html5shiv/dist/html5shiv.min.js"></script>
-    <script src="../components/respond/dest/respond.min.js"></script>
+    <script src="bower_components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/patternfly/components/respond/dest/respond.min.js"></script>
     <![endif]-->
     <!-- IE8 requires jQuery and Bootstrap JS to load in head to prevent rendering bugs -->
     <!-- IE8 requires jQuery v1.x -->
     
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     
   </head>
   <body>
@@ -86,8 +89,12 @@
           </div>
 
 
-            <h2><img src="http://placehold.it/40x40">  <strong>Name of the variant:</strong> <span><i class="fa fa-check"></i> Successful installation</span></h2>
-            <p><strong>Excellent!</strong> Now lets test by sending a notification and see if everything adds up.</p>
+          <h2 class="ups-variant-name-header ups-has-icon ups-variant-android">
+              <strong>Name of the variant:</strong>
+              <span><i class="fa fa-check"></i> Successful installation</span>
+          </h2>
+          
+          <p><strong>Excellent!</strong> Now lets test by sending a notification and see if everything adds up.</p>
             
 
 
@@ -113,6 +120,9 @@
         <div class="col-sm-4 col-md-3 sidebar-pf sidebar-pf-right">
 
           <div class="sidebar-header sidebar-header-bleed-left sidebar-header-bleed-right">
+            <div class="actions pull-right">
+              <a href="#"><a href="app-detail-blank.html">Skip the wizard <i class="fa fa-angle-double-right"></i></a>
+            </div>
             <h2 class="h5">Wizard steps</h2>
           </div>
           <ol class="list-unstyled ups-steps">
@@ -122,7 +132,6 @@
             <li class="active"><strong>4</strong> Test! Send notification</li>
             <li><strong>5</strong> Backend: Set up sender API</li>
           </ol>
-          <p><a href="app-detail.html">Skip this, take to this app <i class="fa fa-angle-double-right"></i></a>
 
 
 
