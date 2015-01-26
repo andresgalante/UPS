@@ -10188,11 +10188,11 @@ h3 .muted {
   top: 12px;
 }
 .ups-main-warning {
-  text-align: center;
-  position: absolute;
-  top: 20px;
   left: 0;
+  position: absolute;
   right: 0;
+  text-align: center;
+  top: 20px;
   z-index: 9999;
 }
 .ups-main-warning .alert {
@@ -10277,36 +10277,36 @@ h3 .muted {
 }
 .ups-wizard .well {
   margin-top: 20px;
-  position: relative;
   padding-top: 34px;
+  position: relative;
 }
 .ups-wizard .well:before {
+  color: #999999;
   content: "\f105";
   font-family: "FontAwesome";
-  position: absolute;
   font-size: 24px;
   left: -25px;
-  color: #999999;
+  position: absolute;
 }
 .ups-wizard .well#box1:before {
   display: none;
 }
 .ups-wizard .well .ups-number {
+  display: block;
+  left: 0px;
   position: absolute;
   top: -17px;
-  left: 0px;
-  display: block;
   width: 100%;
 }
 .ups-wizard .well .ups-number span {
   background: #333333;
-  color: #eeeeee;
-  line-height: 34px;
-  width: 34px;
   border-radius: 17px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  color: #eeeeee;
   display: inline-block;
   font-weight: bold;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  line-height: 34px;
+  width: 34px;
 }
 .ups-steps li {
   margin-bottom: 5px;
@@ -10442,12 +10442,12 @@ h2 span {
 }
 .ups-app-stream .app-icon {
   background-color: #1cace9;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
   color: rgba(255, 255, 255, 0.9);
   font-size: 30px;
   font-weight: lighter;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
 }
 .actions {
   position: relative;
