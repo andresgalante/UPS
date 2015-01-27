@@ -29,6 +29,7 @@
     <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="bower_components/highlightjs/highlight.pack.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
   </head>
@@ -148,7 +149,7 @@
 
 <div class="ups-snippet">
 <a href="#" data-toggle="tooltip" data-placement="left" title="Copy to clipboard">Copy</a>
-<pre>
+<pre class="pre-scrollable"><code class="java">
 JavaSender defaultJavaSender = new SenderClient.Builder("http://localhost:8080/ag-push/").build();
 UnifiedMessage unifiedMessage = new UnifiedMessage.Builder()
         .pushApplicationId("bff6aeb2-6b30-4967-bf0a-9a99d0873a63")
@@ -167,7 +168,7 @@ defaultJavaSender.send(unifiedMessage, new MessageResponseCallback() {
         //bring out the bad news
     }
 });
-</pre>
+</code></pre>
 </div>
 
             <h3>Next step:</h3>

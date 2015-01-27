@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+// Keycloack set up // TODO(agalante) this doesn't work :(
+$(".ups-keycloack-custom-input input").click(function() {
+    if($(this).is(":checked")) {
+        $(".ups-keycloack-custom-url").show(300);
+    } else {
+        $(".ups-keycloack-custom-url").hide(200);
+    }
+});
+
+
 // Send notification modal, opens and close variables
   $(".ups-all-variables input").click(function(){
     $(".ups-more-variables").fadeToggle("fast");
@@ -69,7 +79,8 @@ $(".js-example-placeholder-single").select2({
   allowClear: true
 });
 
-
 });
+
+hljs.initHighlightingOnLoad();
 
 

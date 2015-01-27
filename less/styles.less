@@ -9,6 +9,8 @@
 @font-path:         "../bower_components/patternfly/dist/fonts";
 @icon-font-path:    "../bower_components/patternfly/components/bootstrap/fonts/";
 
+//@import "../bower_components/highlightjs/styles/default.css";
+
 
  .muted{
    color: @gray-light;
@@ -35,6 +37,14 @@ padding: 12px 10px;}
 .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon-user{
   top: 12px;
 }
+
+//keycloack ==========================================================
+
+.ups-keycloack-custom-url{
+  display: none;
+}
+
+
 
 //main warning ==========================================================
 
@@ -512,4 +522,22 @@ color: @brand-success;
  @login-bg-color: #080808;
  @img-path:      "../img";
  @img-bg-login:  "bg-login.jpg";
+   
+ 
+// Code snippet ===========================================
+ 
+
+@import "../bower_components/highlightjs/styles/zenburn.css";
+
+// makes code snippets short
+pre{
+//  max-height: 310px;
+  background: #3f3f3f;// same color as highlightjs theme zenburn
+  padding: 0;
+}
+
+
+.hljs {
+ padding: 0 @line-height-computed / 2;
+}
 

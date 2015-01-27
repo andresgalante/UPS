@@ -27,6 +27,7 @@
     <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+    <script type="text/javascript" src="bower_components/highlightjs/highlight.pack.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     
       
@@ -96,10 +97,10 @@
           <span class="pficon pficon-close"></span>
         </button>
 -->
-        <h4 class="modal-title" id="myModalLabel">First step: Keycloack configurations</h4>
+        <h4 class="modal-title" id="myModalLabel">First Step:  Configure KeyCloak</h4>
       </div>
       <div class="modal-body">
-        <p>UnifiedPush Server uses Keycloak as an authentication and user management endpoint. You can either use a default instance that comes with UnifiedPush Server installation or you choose to select an existing or a standalone Keycloak installation (so you can use it as an authentication backend for more applications).</p>
+        <p>UnifiedPush Server uses Keycloak as an authentication and user management endpoint. Choose a default instance or a standalone Keycloak installation that can be use as an authentication for other applications. <a href="#">More information</a></p>
  
 
           <form role="form">
@@ -107,17 +108,17 @@
             <div class="radio">
               <label>
                 <input type="radio" name="optionsRadios" id="Default" value="option1" checked="">
-                <strong>Default</strong>  A bundled Keycloak instance will be used as an authentication backend
+                <strong>Default</strong>  A bundled Keycloak instance will be used as an authentication backend.
               </label>
             </div>
-            <div class="radio">
+            <div class="radio ups-keycloack-custom-input">
               <label>
                 <input type="radio" name="optionsRadios" id="Custom" value="option2">
-                <strong>Custom</strong> Use an existing or a standalone Keycloak instance (by providing its URL)
+                <strong>Custom</strong> Use an existing or a standalone Keycloak instance.
               </label>
             </div>
           
-            <div class="form-group">
+            <div class="form-group ups-keycloack-custom-url">
               <label for="keycloackUrl">Keycloack URL</label>
               <input type="text" class="form-control" id="keycloackUrl" placeholder="Enter your keycloack URL">
             </div>
@@ -125,7 +126,7 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Continue to Unified Push Server</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Start Unified Push Server</button>
       </div>
     </div>
   </div>

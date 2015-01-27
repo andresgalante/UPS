@@ -1,3 +1,4 @@
+@import "../bower_components/highlightjs/styles/zenburn.css";
 /*!
  * Based on Bootstrap v3.3.1 
  */
@@ -10187,6 +10188,9 @@ h3 .muted {
 .navbar-pf .navbar-utility li.dropdown > .dropdown-toggle .pficon-user {
   top: 12px;
 }
+.ups-keycloack-custom-url {
+  display: none;
+}
 .ups-main-warning {
   left: 0;
   position: absolute;
@@ -10595,4 +10599,11 @@ h2 span {
 .ups-variant-mozila:before,
 .ups-variant-mozila span:before {
   background-position: center -160px;
+}
+pre {
+  background: #3f3f3f;
+  padding: 0;
+}
+.hljs {
+  padding: 0 10px;
 }
