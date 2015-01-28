@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+prettyPrint();
+
 // Keycloack set up // TODO(agalante) this doesn't work :(
 $(".ups-keycloack-custom-input input").click(function() {
     if($(this).is(":checked")) {
@@ -81,6 +84,5 @@ $(".js-example-placeholder-single").select2({
 
 });
 
-hljs.initHighlightingOnLoad();
 
 

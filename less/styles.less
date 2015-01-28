@@ -524,20 +524,119 @@ color: @brand-success;
  @img-bg-login:  "bg-login.jpg";
    
  
-// Code snippet ===========================================
  
+// Code snippet ===========================================
 
-@import "../bower_components/highlightjs/styles/zenburn.css";
+.pre-scrollable{
+  max-height: 290px;
+}
+ 
+//
+// Based on  http://jmblog.github.io/color-themes-for-google-code-prettify/github/
+// --------------------------------------------------
 
-// makes code snippets short
-pre{
-//  max-height: 310px;
-  background: #3f3f3f;// same color as highlightjs theme zenburn
-  padding: 0;
+/* Patternfly Theme */
+.prettyprint {
+  background: #fff;
+//  border: 1px solid @gray-light;
+  font-family: @font-family-monospace;
+  font-size: @font-size-base;
+  line-height: 1.5;
+  padding: @padding-large-horizontal;
+}
+
+.pln {
+  color: @gray-dark;
 }
 
 
-.hljs {
- padding: 0 @line-height-computed / 2;
+@media screen {
+  .str {
+    color: @btn-danger-bg;
+  }
+
+  .kwd {
+    color: @gray-dark;
+  }
+
+  .com {
+    color: @brand-success;
+  }
+
+  .typ {
+    color: @brand-info;
+  }
+
+  .lit {
+    color: @brand-info;
+  }
+
+  .pun {
+    color: @gray-dark;
+  }
+
+  .opn {
+    color: @gray-dark;
+  }
+
+  .clo {
+    color: @gray-dark;
+  }
+
+  .tag {
+    color: navy;
+  }
+
+  .atn {
+    color: teal;
+  }
+
+  .atv {
+    color: @btn-danger-bg;
+  }
+
+  .dec {
+    color: @gray-dark;
+  }
+
+  .var {
+    color: teal;
+  }
+
+  .fun {
+    color: @brand-success;
+  }
 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+}
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+}
+
+
+
 

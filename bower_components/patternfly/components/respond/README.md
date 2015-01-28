@@ -20,11 +20,11 @@ Usage Instructions
 
 <div class="ups-snippet">
 <a href="#" data-toggle="tooltip" data-placement="left" title="Copy to clipboard">Copy</a>
-<pre class="pre-scrollable"><code class="java">
+<pre class="pre-scrollable prettyprint">
     @media screen and (min-width: 480px){
         ...styles for 480px and up go here
     }
-</code></pre>
+</pre>
 </div>
 
 2. Reference the respond.min.js script (1kb min/gzipped) after all of your CSS (the earlier it runs, the greater chance IE users will not see a flash of un-media'd content)
@@ -45,7 +45,7 @@ See `cross-domain/example.html` for a demo:
 
 <div class="ups-snippet">
 <a href="#" data-toggle="tooltip" data-placement="left" title="Copy to clipboard">Copy</a>
-<pre class="pre-scrollable"><code class="java">
+<pre class="pre-scrollable prettyprint">
 	&lt;!-- Respond.js proxy on external server --&gt;
 	&lt;link href=&quot;http://externalcdn.com/respond-proxy.html&quot; id=&quot;respond-proxy&quot; rel=&quot;respond-proxy&quot; /&gt;
 
@@ -54,7 +54,7 @@ See `cross-domain/example.html` for a demo:
 
 	&lt;!-- Respond.js proxy script on local server --&gt;
 	&lt;script src="/path/to/respond.proxy.js"&gt;&lt;/script&gt;
-</code></pre>
+</pre>
 </div>
 
 If you are having problems with the cross-domain setup, make sure respond-proxy.html does not have a query string appended to it.

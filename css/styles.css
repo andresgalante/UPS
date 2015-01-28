@@ -1,4 +1,3 @@
-@import "../bower_components/highlightjs/styles/zenburn.css";
 /*!
  * Based on Bootstrap v3.3.1 
  */
@@ -10600,10 +10599,87 @@ h2 span {
 .ups-variant-mozila span:before {
   background-position: center -160px;
 }
-pre {
-  background: #3f3f3f;
-  padding: 0;
+.pre-scrollable {
+  max-height: 290px;
 }
-.hljs {
-  padding: 0 10px;
+/* Patternfly Theme */
+.prettyprint {
+  background: #fff;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px;
+}
+.pln {
+  color: #333333;
+}
+@media screen {
+  .str {
+    color: #ab070f;
+  }
+  .kwd {
+    color: #333333;
+  }
+  .com {
+    color: #5cb75c;
+  }
+  .typ {
+    color: #27799c;
+  }
+  .lit {
+    color: #27799c;
+  }
+  .pun {
+    color: #333333;
+  }
+  .opn {
+    color: #333333;
+  }
+  .clo {
+    color: #333333;
+  }
+  .tag {
+    color: navy;
+  }
+  .atn {
+    color: teal;
+  }
+  .atv {
+    color: #ab070f;
+  }
+  .dec {
+    color: #333333;
+  }
+  .var {
+    color: teal;
+  }
+  .fun {
+    color: #5cb75c;
+  }
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
 }
