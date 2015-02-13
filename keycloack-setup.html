@@ -43,50 +43,50 @@
             <img src="img/brand.svg" alt="Aerogear Unified Push Server">
           </div><!--/#brand-->
         </div><!--/.col-*-->
-        <div class="col-sm-7 col-md-6 col-lg-5 login">
-          <form class="form-horizontal" role="form">
-            <div class="form-group">
-              <label for="inputUsername" class="col-sm-2 col-md-2 control-label">Username</label>
-              <div class="col-sm-10 col-md-10">
-                <input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword" class="col-sm-2 col-md-2 control-label">Password</label>
-              <div class="col-sm-10 col-md-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2">
-              </div>
-            </div>
+        
+        
+        <div class="col-sm-7 login">
 
-            <div class="form-group">
-              <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
-<!--
-                  <div class="checkbox">
-                  <label>
-                    <input type="checkbox" tabindex="3"> Remember Username
-                  </label>
-                </div>
-                <span class="help-block"> Forgot <a href="#" tabindex="5">Username</a> or <a href="#" tabindex="6">Password</a>?</span>
-  -->
-              </div>
-              <div class="col-xs-4 col-sm-4 col-md-4 submit">
-                <a href="wizard01-welcome.html"  class="btn btn-primary btn-lg" tabindex="4">Log In</a>
-              </div>
-            </div>
 
+          <h4>Choose what type of user managment and authentication you would like:</h4>
+
+          <p></p>
+ 
+
+          <form role="form">
+          
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" id="Default" value="option1" checked="">
+                <strong>Default: New KeyCloack bundle.</strong>
+                <br />Installs everything you need for a new authentication backend.
+              </label>
+            </div>
+            <div class="radio ups-keycloack-custom-input">
+              <label>
+                <input type="radio" name="optionsRadios" id="Custom" value="option2">
+                <strong>Existing or standalone KeyCloack instance.</strong>
+                <br />Starts Unified Push Server using your existing instance.
+              </label>
+            </div>
+          
+            <div class="form-group ups-keycloack-custom-url">
+              <label for="keycloackUrl">Keycloack URL</label>
+              <input type="text" class="form-control" id="keycloackUrl" placeholder="Enter your keycloack URL">
+            </div>
           </form>
+        <a  href="login.html" class="btn btn-lg btn-primary">Start Unified Push Server</a>
 
-        </div><!--/.col-*-->
-        <div class="col-sm-5 col-md-6 col-lg-7 details">
-          <p><strong>Welcome to Aerogear Unified Push Server!</strong>
-        
-          The AeroGear UnifiedPush Server is a server that allows sending native push messages to different mobile operating systems. Currently the server supports Apple’s APNs, Google Cloud Messaging and Mozilla’s Simple Push. Version is xxx.</p>
-        
+
+
+
+
         </div><!--/.col-*-->
       </div><!--/.row-->
     </div><!--/.container-->
 
 
+  
 
 
 
