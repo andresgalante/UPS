@@ -8804,7 +8804,7 @@ h6 .label {
   }
 }
 .login-pf body {
-  background: #080808 url("../img/bg-login.jpg") repeat-x 50% 0;
+  background: #080808 url("../img/bg-login-2.jpg") repeat-x 50% 0;
   background-size: auto;
 }
 @media (min-width: 768px) {
@@ -10822,6 +10822,9 @@ h2 span {
 .ups-variant-mozila:before,
 .ups-variant-mozila span:before {
   background-position: center -160px;
+}
+.login-pf .container {
+  background: rgba(0, 0, 0, 0.2);
 }
 .pre-scrollable {
   max-height: 290px;
