@@ -29,6 +29,10 @@
     <script type="text/javascript" src="bower_components/patternfly/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/components/datatables/media/js/jquery.dataTables.js"></script>
     <script type="text/javascript" src="bower_components/patternfly/components/bootstrap-select/bootstrap-select.min.js"></script>
+    
+    <script src="bower_components/patternfly/components/c3/c3.min.js"></script>
+    <script src="bower_components/patternfly/components/d3/d3.min.js"></script>
+
     <script type="text/javascript" src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
     <script type="text/javascript" src="bower_components/google-code-prettify/bin/prettify.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -165,12 +169,94 @@
             
             </div> <!-- row -->
 
-
-            <div class="well" style="padding: 150px 0; text-align: center ">
-              <p>LINEAR GRAPH PER DAY</p>
-              <p>like: http://blogparsecom.c.presscdn.com/wp-content/uploads/2013/03/pushgraph.png</p>
+      
+      
+          
+          <div class="ups-date-range dropdown">
+            <i class="fa fa-calendar"></i>
+            <div class="ups-date-input" data-toggle="dropdown">
+              Last week <span class="ups-additional-info">(7 - 14 Feb, 2015)</span>
             </div>
-            
+              
+            <div class="dropdown-menu ups-infotip bottom-right">
+              <div class="arrow"></div>
+              <div class="dropdown-menu-content">
+                <span class="label">Last</span>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default">1h</button>
+                  <button type="button" class="btn btn-default">12h</button>
+                  <button type="button" class="btn btn-default">Day</button>
+                  <button type="button" class="btn btn-default active">Week</button>
+                  <button type="button" class="btn btn-default">Month</button>
+                  <button type="button" class="btn btn-default">Year</button>
+                </div>
+              </div>  
+              
+            </div>
+          </div>
+          
+          <h3>Sent Messages vs Open Messages</h3>
+      
+      
+      
+      
+      
+      
+      
+      
+      <div id="chart1"></div>
+   
+        <script>
+ 
+        
+        
+        var chart = c3.generate({
+          axis: {
+            x: {
+              tick: {
+                outer: false
+              }
+            },
+            y: {
+              tick: {
+                outer: false
+              }
+            }
+          },
+          bindto: '#chart1',
+          color: {
+            pattern: ['#006e9c','#00a8e1', '#3f9c35', '#ec7a08', '#cc0000']
+          },
+          data: {
+            columns: [
+              ['Sent messages', 2400, 3190, 3210, 2100, 3950, 2050],
+              ['Open messages', 1250, 1820, 1900, 1240, 2115, 1020],
+//              ['data3', 70, 100, 390, 295, 170, 220],
+//              ['data4', 10, 340, 30, 290, 35, 20],
+//              ['data5', 90, 150, 160, 165, 180, 5]
+            ]
+          },
+          grid: {
+            y: {
+              show: true
+            }
+          },
+          point: {
+            r: 4
+          }
+        });
+        
+        
+        
+        
+      </script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
         </div><!-- /col -->
 

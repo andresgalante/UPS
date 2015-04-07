@@ -517,10 +517,10 @@ a.text-info:hover {
   color: #245269;
 }
 .text-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 a.text-warning:hover {
-  color: #66512c;
+  color: #bb6106;
 }
 .text-danger {
   color: #a94442;
@@ -714,7 +714,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
-  background-color: #f5f5f5;
+  background-color: #fcfcfc;
   border: 1px solid #cccccc;
   border-radius: 1px;
 }
@@ -1884,25 +1884,25 @@ select[multiple].input-lg {
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 .has-warning .form-control {
-  border-color: #8a6d3b;
+  border-color: #ec7a08;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
-  border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  border-color: #bb6106;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #faad60;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #faad60;
 }
 .has-warning .input-group-addon {
-  color: #8a6d3b;
-  border-color: #8a6d3b;
+  color: #ec7a08;
+  border-color: #ec7a08;
   background-color: #fcf8e3;
 }
 .has-warning .form-control-feedback {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 .has-error .help-block,
 .has-error .control-label,
@@ -4737,26 +4737,26 @@ a.list-group-item-info.active:focus {
   border-color: #31708f;
 }
 .list-group-item-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
   background-color: #fcf8e3;
 }
 a.list-group-item-warning {
-  color: #8a6d3b;
+  color: #ec7a08;
 }
 a.list-group-item-warning .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-warning:hover,
 a.list-group-item-warning:focus {
-  color: #8a6d3b;
+  color: #ec7a08;
   background-color: #faf2cc;
 }
 a.list-group-item-warning.active,
 a.list-group-item-warning.active:hover,
 a.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #8a6d3b;
-  border-color: #8a6d3b;
+  background-color: #ec7a08;
+  border-color: #ec7a08;
 }
 .list-group-item-danger {
   color: #a94442;
@@ -7795,6 +7795,174 @@ button.close {
 .bootstrap-select .bs-actionsbox .btn-group button {
   width: 50%;
 }
+/* C3 charts*/
+/*-- Chart --*/
+.c3 svg {
+  font: 10px sans-serif;
+}
+.c3 path,
+.c3 line {
+  fill: none;
+  stroke: #000;
+}
+.c3 text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges;
+}
+.c3-chart-arc path {
+  stroke: #fff;
+}
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 13px;
+}
+/*-- Axis --*/
+/*-- Grid --*/
+.c3-grid line {
+  stroke: #aaa;
+}
+.c3-grid text {
+  fill: #aaa;
+}
+.c3-xgrid,
+.c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+/*-- Text on Chart --*/
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+/*-- Line --*/
+.c3-line {
+  stroke-width: 1px;
+}
+/*-- Point --*/
+.c3-circle._expanded_ {
+  stroke-width: 1px;
+  stroke: white;
+}
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 2px;
+}
+/*-- Bar --*/
+.c3-bar {
+  stroke-width: 0;
+}
+.c3-bar._expanded_ {
+  fill-opacity: 0.75;
+}
+/*-- Arc --*/
+.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em;
+}
+/*-- Focus --*/
+.c3-target.c3-focused {
+  opacity: 1;
+}
+.c3-target.c3-focused path.c3-line,
+.c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+.c3-target.c3-defocused {
+  opacity: 0.3 !important;
+}
+/*-- Region --*/
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1;
+}
+/*-- Brush --*/
+.c3-brush .extent {
+  fill-opacity: .1;
+}
+/*-- Select - Drag --*/
+/*-- Legend --*/
+.c3-legend-item {
+  font-size: 12px;
+}
+.c3-legend-item-hidden {
+  opacity: 0.15;
+}
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1;
+}
+/*-- Tooltip --*/
+.c3-tooltip-container {
+  z-index: 10;
+}
+.c3-tooltip {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  empty-cells: show;
+  width: auto;
+  -webkit-box-shadow: 7px 7px 12px -9px #777777;
+  -moz-box-shadow: 7px 7px 12px -9px #777777;
+  box-shadow: 7px 7px 12px -9px #777777;
+  opacity: 0.9;
+}
+.c3-tooltip tr {
+  border: 1px solid #CCC;
+}
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: #FFF;
+}
+.c3-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: #fff;
+  border-left: 1px dotted #999;
+  color: #000;
+}
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.c3-tooltip td.value {
+  text-align: right;
+}
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: #000;
+  font-size: 16px;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+.c3-chart-arc .c3-gauge-value {
+  fill: #000;
+  /*  font-size: 28px !important;*/
+}
 /* PatternFly overrides and new stuff */
 /* PatternFly specific */
 /* Bootstrap overrides */
@@ -8114,6 +8282,55 @@ fieldset[disabled] .btn-primary.active {
 .btn-group-xs .btn,
 .btn-group-xs > .btn {
   font-weight: 400;
+}
+.c3 path {
+  stroke: #d1d1d1;
+}
+.c3 svg {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.c3-axis-x .tick line {
+  stroke: #d1d1d1;
+}
+.c3-axis-y .tick line {
+  display: none;
+}
+.c3-chart-arc path {
+  stroke: #fff;
+}
+.c3-grid line {
+  stroke: #d1d1d1;
+}
+.c3-line {
+  stroke-width: 2px;
+}
+.c3-tooltip {
+  background: #434343;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.c3-tooltip td {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.c3-tooltip th {
+  background: transparent;
+  font-size: 12px;
+  padding: 5px 10px 0;
+}
+.c3-tooltip tr {
+  border: 0;
+}
+.c3-tooltip tr + tr > td {
+  padding-top: 0;
+}
+.c3-xgrid,
+.c3-ygrid {
+  stroke-dasharray: 0 0;
 }
 .close {
   text-shadow: none;
@@ -8487,6 +8704,15 @@ fieldset[disabled] .form-control {
 }
 .form-control:hover {
   border-color: #7BB2DD;
+}
+.has-error .form-control:hover {
+  border-color: #843534;
+}
+.has-success .form-control:hover {
+  border-color: #2b542c;
+}
+.has-warning .form-control:hover {
+  border-color: #bb6106;
 }
 .input-group .input-group-btn .btn {
   -webkit-box-shadow: none;
@@ -10175,6 +10401,32 @@ td > .progress:first-child:last-child {
 .ie9 .spinner.spinner-xs {
   background-image: url("../img/spinner-xs.gif");
 }
+.prettyprint .atn,
+.prettyprint .com,
+.prettyprint .fun,
+.prettyprint .var {
+  color: #3f9c35;
+}
+.prettyprint .atv,
+.prettyprint .str {
+  color: #a30000;
+}
+.prettyprint .clo,
+.prettyprint .dec,
+.prettyprint .kwd,
+.prettyprint .opn,
+.prettyprint .pln,
+.prettyprint .pun {
+  color: #333333;
+}
+.prettyprint .lit,
+.prettyprint .tag,
+.prettyprint .typ {
+  color: #006e9c;
+}
+.prettyprint ol.linenums {
+  margin-bottom: 0;
+}
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
@@ -10835,6 +11087,25 @@ h2 span {
 }
 .analytics .panel h2 {
   margin: 20px 0;
+}
+.ups-date-range {
+  margin-top: 20px;
+  float: right !important;
+  float: right;
+}
+.ups-date-range .ups-date-input {
+  display: inline;
+  border-bottom: 1px solid #eeeeee;
+  margin-left: 5px;
+}
+.ups-date-range .ups-date-input:hover {
+  border-bottom-color: #00a8e1;
+}
+.ups-date-range .ups-infotip {
+  width: 290px;
+}
+.ups-date-range .ups-infotip .label {
+  color: #333333;
 }
 .nav-tabs {
   margin-bottom: 20px;
