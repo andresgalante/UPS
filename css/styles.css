@@ -10823,8 +10823,21 @@ h2 span {
 .ups-variant-mozila span:before {
   background-position: center -160px;
 }
+.ups-variant-amazon:before,
+.ups-variant-amazon span:before {
+  background-position: center -200px;
+}
 .login-pf .container {
   background: rgba(0, 0, 0, 0.2);
+}
+.analytics .panel {
+  text-align: center;
+}
+.analytics .panel h2 {
+  margin: 20px 0;
+}
+.nav-tabs {
+  margin-bottom: 20px;
 }
 .pre-scrollable {
   max-height: 290px;
