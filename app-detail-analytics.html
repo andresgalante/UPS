@@ -165,18 +165,19 @@
                   </div>
                 </div>
               </div>
-            
-            
+                        
             </div> <!-- row -->
 
       
       
-          
+          <div class="row">
+          <div class="col-sm-8">
+            
           <div class="ups-date-range dropdown">
             <i class="fa fa-calendar"></i>
             <div class="ups-date-input" data-toggle="dropdown">
               Last week <span class="ups-additional-info">(7 - 14 Feb, 2015)</span>
-            </div>
+            </div>     
               
             <div class="dropdown-menu ups-infotip bottom-right">
               <div class="arrow"></div>
@@ -195,17 +196,23 @@
             </div>
           </div>
           
-          <h3>Sent Messages vs Open Messages</h3>
+          <h3>Performance</h3>
       
-      
-      
-      
-      
-      
-      
-      
-      <div id="chart1"></div>
-   
+      <!--
+          <div id="chart1"></div>
+          -->
+
+          <div id="chart6"></div>
+        
+        </div><!-- col -->   
+        
+        <div class="col-sm-4">
+          <h3>Push Networks</h3>
+          <div id="chart8"></div>
+        </div><!-- col -->   
+
+        </div><!-- row -->
+
         <script>
  
         
@@ -247,7 +254,69 @@
           }
         });
         
-        
+        var chart8 = c3.generate({
+          bindto: '#chart8',
+          data: {
+            colors: {
+              iOS: '#006e9c',
+              Android: '#00a8e1',
+              Windows: '#969696'
+            },
+            columns: [
+              ['iOS', 20283563],
+              ['Android', 15000000],
+              ['Windows', 5000000]
+            ],
+            type : 'donut',
+            onclick: function (d, i) { console.log("onclick", d, i); },
+            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+          },
+          donut: {
+            title: "50,283,563 Devices"
+          }
+        });
+
+
+
+
+        var chart6 = c3.generate({
+          axis: {
+            rotated: false,
+            x: {
+              categories: ['Message 01', 'Message 02', 'Message 03', 'Message 04', 'Message 05', 'Message 06'],
+              tick: {
+                outer: false
+              },
+              type: 'category'
+            },
+            y: {
+              tick: {
+                outer: false
+              }
+            }
+          },
+          bindto: '#chart6',
+          color: {
+            pattern: ['#006e9c','#00a8e1',  '#3f9c35', '#ec7a08', '#cc0000']
+          },
+          data: {
+            columns: [
+              ['Delivered messages', 2400, 3190, 3210, 2100, 3950, 2050],
+              ['Open messages', 1250, 1820, 1900, 1240, 2115, 1020],
+              ['Registered Devices', 3250, 3320, 3390, 4220, 4115, 4200],
+            ],
+            groups: [
+              ['Delivered messages', 'Open messages', 'Registered Devices']
+            ],
+            type: 'bar'
+          },
+          grid: {
+            y: {
+              show: true
+            }
+          }
+        });
         
         
       </script>
