@@ -11085,11 +11085,21 @@ h2 span {
 .login-pf .container {
   background: rgba(0, 0, 0, 0.2);
 }
+.analytics .panel-body {
+  position: relative;
+}
 .analytics .panel {
   text-align: center;
 }
 .analytics .panel h2 {
   margin: 20px 0;
+}
+.analytics-help {
+  color: #999999;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 14.4px;
 }
 .ups-date-range {
   float: right !important;

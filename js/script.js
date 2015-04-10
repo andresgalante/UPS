@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 prettyPrint();
 
+  $('[data-toggle="tooltip"]').tooltip()
+
 // Keycloack set up // TODO(agalante) this doesn't work :(
 $(".ups-keycloack-custom-input input").click(function() {
     if($(this).is(":checked")) {
