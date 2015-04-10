@@ -10727,6 +10727,9 @@ h3 .muted {
   margin: 0;
   width: 33%;
 }
+.ups-app-header {
+  margin-bottom: 20px;
+}
 .ups-blank-slate {
   margin: 20px 0;
   padding: 100px 160px;
@@ -11089,7 +11092,6 @@ h2 span {
   margin: 20px 0;
 }
 .ups-date-range {
-  margin-top: 20px;
   float: right !important;
   float: right;
 }

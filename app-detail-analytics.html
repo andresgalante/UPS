@@ -129,50 +129,9 @@
 -->
           </ul>
 
-                        
-            <div class="row analytics">
-              
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Total Push Sent</h3>
-                  </div>
-                  <div class="panel-body">
-                    <h2>23,822,325</h2>
-                  </div>
-                </div>                
-              </div>
-
-              <div class="col-sm-4">                
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Total open messages</h3>
-                  </div>
-                  <div class="panel-body">
-                    <h2>6,432,825</h2>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="col-sm-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Total devices Registred</h3>
-                  </div>
-                  <div class="panel-body">
-                    <h2>50,283,563</h2>
-                  </div>
-                </div>
-              </div>
-                        
-            </div> <!-- row -->
-
-      
-      
-          <div class="row">
-          <div class="col-sm-8">
-            
+                     
+          <div class="ups-app-header"> 
+                       
           <div class="ups-date-range dropdown">
             <i class="fa fa-calendar"></i>
             <div class="ups-date-input" data-toggle="dropdown">
@@ -195,6 +154,55 @@
               
             </div>
           </div>
+          <h3>App Analytics</h3>
+
+          </div><!-- app header -->
+
+                     
+                        
+            <div class="row analytics">
+              
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Total Push Sent</h3>
+                  </div>
+                  <div class="panel-body">
+                    <h2>23,822,325</h2>
+                  </div>
+                </div>                
+              </div>
+              
+              
+              <div class="col-sm-4">                
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Total open messages</h3>
+                  </div>
+                  <div class="panel-body">
+                    <h2>6,432,825</h2>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-sm-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Average Open Rate</h3>
+                  </div>
+                  <div class="panel-body">
+                    <h2>3.56 %</h2>
+                  </div>
+                </div>
+              </div>
+                        
+            </div> <!-- row -->
+
+      
+      
+          <div class="row">
+          <div class="col-sm-8">
           
           <h3>Performance</h3>
       
@@ -302,13 +310,13 @@
           },
           data: {
             columns: [
-              ['Delivered notifications', 2400, 3190, 3210, 2100, 3950, 2050],
-              ['Open notifications', 1250, 1820, 1900, 1240, 2115, 1020],
-//              ['Registered Devices', 3250, 3320, 3390, 4220, 4115, 4200],
+              ['Push notifications', 2400, 3190, 3210, 2100, 3950, 2050],
+              ['Push Open', 1250, 1820, 1900, 1240, 2115, 1020],
+//              ['App Opens', 1450, 2020, 2100, 1840, 2315, 1520],
             ],
-            groups: [
-              ['Delivered notifications', 'Open notifications']
-            ],
+//            groups: [
+//              ['Delivered notifications', 'Open notifications']
+//            ],
             type: 'bar'
           },
           grid: {
